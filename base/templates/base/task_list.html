@@ -1,4 +1,10 @@
-<p>{{request.user}}</p>
+{%  if requeste.user.is_authenticated %}
+    <p>{{request.user}}</p>
+    <a href="">Logout</a>
+{% else %}
+    <a href="">Login</a>
+{% endif %}
+
 
 <h1>My Todo List</h1>
 <a href="{% url 'task-create' %}">Add Task</a>
