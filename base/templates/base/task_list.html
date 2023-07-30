@@ -31,6 +31,11 @@
                     <div class="task-complete-icon"></div>
                     <i><s><a href="{% url 'task-update' task.id %}">{{tasks}}</a></s></i>
                 </div>
+                {% else %}
+                <div class="task-title">
+                    <div class="task-complete-icon"></div>
+                    <i><s><a href="{% url 'task-update' task.id %}">{{tasks}}</a></s></i>
+                </div>
             {% endif %}
         </div>
 
